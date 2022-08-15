@@ -1,12 +1,14 @@
 {
-  "name": "geyokoyama",
-  "version": "1.0.0",
+  "name": "geyokoyama.com",
+  "version": "0.1.0",
   "private": true,
-  "description": "geyokoyama",
-  "author": "geyokoyama",
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "George Yokoyama's personal website",
+  "author": "George E. Yokoyama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geyokoyama/geyokoyama.com"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -16,7 +18,7 @@
   },
   "dependencies": {
     "gatsby": "^4.20.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
