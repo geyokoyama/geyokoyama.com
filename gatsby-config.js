@@ -9,5 +9,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content/`,
+      }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-images`,
+        ]
+      }
+    },
   ],
 }

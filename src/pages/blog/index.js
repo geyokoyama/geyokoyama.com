@@ -1,9 +1,11 @@
 import * as React from "react"
+import { graphql } from "gatsby"
 
 import config from '../../utils/config'
 
-const Blog = ({ data }) => {
+import PostCard from "../../components/PostCard"
 
+const Blog = ({ data }) => {
   return (
     <article className="article">
       <div className="container">
@@ -14,12 +16,31 @@ const Blog = ({ data }) => {
           </div>
         </header>
         <div className="article__content">
-          Posts go here.
+          {
+            data.allMdx.nodes.map(post =>
+              <PostCard key={ post.id } data={ post } />
+            )
+          }
         </div>
       </div>
     </article>
   )
 }
+
+export const query = graphql`
+  query {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, filter: { frontmatter: { type: { eq: "blog" } } }) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMM D, YYYY")
+          title
+        }
+        id
+        slug
+      }
+    }
+  }
+`
 
 export const Head = () => <title>Blog | { config.siteTitle }</title>
 

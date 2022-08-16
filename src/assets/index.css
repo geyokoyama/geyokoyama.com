@@ -4,9 +4,12 @@
 :root {
   --container-width: 1024px;
 
-
   /* Font Family */
   --font-family-default: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -140,6 +143,41 @@ h5 {
   text-decoration: none;
   padding: 0.2rem 0;
 }
+
+.post-card {
+  margin: 0.4rem 0;
+  padding: 0.2rem 0;
+  position: relative;
+}
+
+.post-card__header {
+  display: grid;
+  grid-template-columns: 1fr 30vw;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.post-card__header--title {
+  margin: 0;
+}
+
+.post-card__header--title a {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  text-decoration: none;
+}
+
+.post-card__header--meta {
+  margin: 0;
+  margin-left: auto;
+  font-style: italic;
+}
+
+.post-card__header--summary {}
 
 /* Pages */
 
