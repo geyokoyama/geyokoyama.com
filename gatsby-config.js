@@ -1,7 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `geyokoyama`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `George Yokoyama`,
+    author: `George E Yokoyama`,
+    pathPrefix: `/`,
+    siteUrl: `https://www.geyokoyama.com`,
+    description: `Ruby on Rails developer. This is my personal website.`,
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ],
 }
