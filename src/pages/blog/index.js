@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import config from '../../utils/config'
+
 const Blog = ({ data }) => {
 
   return (
@@ -19,11 +21,7 @@ const Blog = ({ data }) => {
   )
 }
 
-export const Head = () => {
-  return (
-    <title>Blog | George Yokoyama</title>
-  )
-}
+export const Head = () => <title>Blog | { config.siteTitle }</title>
 
 export default Blog
 

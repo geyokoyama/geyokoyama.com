@@ -1,6 +1,8 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
+import config from '../utils/config'
+
 import Online from '../components/Online'
 
 const IndexPage = () => {
@@ -37,4 +39,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>George Yokoyama</title>
+export const Head = () => <title>{ config.siteTitle }</title>

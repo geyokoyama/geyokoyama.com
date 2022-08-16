@@ -7,7 +7,7 @@ module.exports = {
     description: `Ruby on Rails developer. This is my personal website.`,
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
   ],
 }

@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import config from '../utils/config'
+
 const NotFoundPage = () => {
   return (
     <article>
@@ -16,4 +18,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found | George Yokoyama</title>
+export const Head = () => <title>Not found | { config.siteTitle }</title>
