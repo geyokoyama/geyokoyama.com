@@ -1,3 +1,4 @@
 [submodule "content"]
+  branch = main
 	path = content
 	url = git@github.com:geyokoyama/geyokoyama-content.git
