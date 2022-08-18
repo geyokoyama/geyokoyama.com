@@ -3,12 +3,7 @@ import { Link } from "gatsby"
 
 import Online from './Online'
 
-const primaryNavItems = [
-  { url: "/", label: "Home" },
-  { url: "/blog", label: "Blog" },
-]
-
-const Footer = () => {
+const Footer = ({ author, internalLinks }) => {
   return (
     <footer className="footer">
       <div className="container">
@@ -16,17 +11,17 @@ const Footer = () => {
           <Online is_footer />
           <ul className="footer__content__ul site_nav">
             {
-              primaryNavItems.map(item => (
-                <li key={ item.label }>
-                  <Link to={ item.url }>
-                    { item.label }
+              internalLinks.map(navItem => (
+                <li key={ navItem.name }>
+                  <Link to={ navItem.link }>
+                    { navItem.name }
                   </Link>
                 </li>
               ))
             }
           </ul>
           <small className="footer__content__copyright">
-            &copy; 2022 George E. Yokoyama
+            &copy; 2022 { author }
           </small>
         </div>
       </div>

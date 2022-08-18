@@ -9,6 +9,7 @@ const Layout = ({ children }) => (
     query siteMetadataQuery {
       site {
         siteMetadata {
+          author
           title
           internalLinks {
             name
@@ -24,7 +25,7 @@ const Layout = ({ children }) => (
         <main>
           { children }
         </main>
-        <Footer />
+        <Footer author={ data.site.siteMetadata.author } internalLinks={ data.site.siteMetadata.internalLinks } />
       </div>
     )}
   />

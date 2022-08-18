@@ -26,7 +26,6 @@ const IndexPage = () => {
             <h2>About</h2>
             <p>Hello there! Welcome to the website of George Yokoyama. A Japanese speaking, tutorial watching, web novel reading, PC gaming web developer currently based in Dublin, California.</p>
             <p>My motivation for this website is to have place to share what I've learned and to document my thoughts. It's built with <a href="https://www.gatsbyjs.com/">Gatsby</a>, deployed on <a href="https://www.netlify.com/">Netlify</a>, and the code for this site is available <a href="https://www.github.com/geyokoyama/geyokoyama.com">here</a>.</p>
-            <Link to="/blog/resume">Resume</Link>
           </section>
           <section className="article__content__section">
             <h2>Contact</h2>
