@@ -9,7 +9,7 @@ const Post = ({ data }) => {
       <div className="container">
         <header className="article__header">
           <h1 className="article__header--title">{ data.mdx.frontmatter.title }</h1>
-          <p className="article__header--meta">Updated on { data.mdx.frontmatter.date }</p>
+          { data.mdx.frontmatter.date && <p className="article__header--meta">Updated on { data.mdx.frontmatter.date }</p> }
         </header>
         <div className="article">
           <MDXRenderer>

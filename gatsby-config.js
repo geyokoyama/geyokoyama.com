@@ -5,6 +5,12 @@ module.exports = {
     pathPrefix: `/`,
     siteUrl: `https://www.geyokoyama.com`,
     description: `Ruby on Rails developer. This is my personal website.`,
+    internalLinks: [
+      {
+        name: 'Blog',
+        link: '/blog'
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-image`,
