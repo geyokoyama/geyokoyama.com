@@ -1,9 +1,9 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import config from '../../utils/config'
+import config from '../utils/config'
 
-import PostCard from "../../components/PostCard"
+import PostCard from "../components/PostCard"
 
 const Blog = ({ data }) => {
   return (
