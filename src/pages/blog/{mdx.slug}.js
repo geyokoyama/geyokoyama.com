@@ -26,7 +26,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       body
       frontmatter {
-        date(formatString: "MMMM D, YYYY")
+        date
         title
       }
     }
@@ -34,3 +34,4 @@ export const query = graphql`
 `
 
 export default Post
+

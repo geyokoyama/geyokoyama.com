@@ -5,7 +5,7 @@ import config from '../utils/config'
 
 import Online from '../components/Online'
 
-const IndexPage = () => {
+const Index = () => {
   return (
     <article>
       <div className="container">
@@ -37,6 +37,6 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Index
 
 export const Head = () => <title>{ config.siteTitle }</title>
