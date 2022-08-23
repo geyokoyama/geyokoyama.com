@@ -136,7 +136,7 @@ h5 {
   font-weight: bold;
 }
 
-.masthead__nav--item a.active:before {
+.masthead__nav--item a.active::before {
   content: "";
   height: 0.15rem;
   width: 100%;
