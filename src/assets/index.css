@@ -130,13 +130,12 @@ h5 {
   text-decoration: none;
   padding: 0.5rem 0;
   position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.4;
 }
 
-.masthead__nav--item a.active {
-  font-weight: bold;
-}
-
-.masthead__nav--item a.active::before {
+.masthead__nav--item a::before {
   content: "";
   height: 0.15rem;
   width: 100%;
@@ -144,6 +143,21 @@ h5 {
   position:absolute;
   bottom: 0;
   left: 0;
+  transform: translate(-100%);
+  transition: 0.3s;
+}
+
+.masthead__nav--item a.active {
+  font-weight: bold;
+}
+
+.masthead__nav--item a.active::before {
+  transform: translate(0);
+}
+
+.masthead__nav--item a:focus::before,
+.masthead__nav--item a:hover::before {
+  transform: translate(0);
 }
 
 .footer {
