@@ -10,7 +10,12 @@ const Masthead = ({ siteTitle, internalLinks }) => (
           {
             internalLinks.map(navItem => (
               <li className="masthead__nav--item" key={ navItem.name }>
-                <Link to={ navItem.link }>
+                <Link
+                  to={ navItem.link }
+                  partiallyActive={ true }
+                  activeClassName="active"
+                  className={ `navItem ${navItem.name.toLowerCase()}` }
+                >
                   { navItem.name }
                 </Link>
               </li>

@@ -6,6 +6,8 @@
 
   /* Font Family */
   --font-family-default: sans-serif;
+
+  --text-color: black;
 }
 
 * {
@@ -127,6 +129,21 @@ h5 {
 .masthead__nav--item a {
   text-decoration: none;
   padding: 0.5rem 0;
+  position: relative;
+}
+
+.masthead__nav--item a.active {
+  font-weight: bold;
+}
+
+.masthead__nav--item a.active:before {
+  content: "";
+  height: 0.15rem;
+  width: 100%;
+  background-color: var(--text-color);
+  position:absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .footer {
@@ -192,6 +209,10 @@ h5 {
 }
 
 .article__header {}
+
+.article__header:first-child {
+  margin-top: 4rem;
+}
 
 .article__header--title {
   font-size: 2.5rem;
