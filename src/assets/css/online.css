@@ -1,0 +1,40 @@
+.online {
+  padding: 0;
+  list-style: none;
+}
+
+.online li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.online .icon {
+  height: 2rem;
+  padding: 0 0.1rem;
+}
+
+.online .text {
+  margin-left: 1rem;
+}
+
+.online .text .name {
+  font-weight: bold;
+}
+
+.online a {
+  text-decoration: none;
+}
+
+.online a:before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.online .text .description {
+  font-size: 0.9rem;
+}

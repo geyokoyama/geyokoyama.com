@@ -1,0 +1,18 @@
+.footer {
+  margin: 3rem 0;
+}
+
+.footer__content__ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.footer__content__ul a {
+  text-decoration: none;
+  padding: 0.2rem 0;
+}

@@ -1,0 +1,37 @@
+.article {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 1.5rem;
+}
+
+.article__header {}
+
+.article__header:first-child {
+  margin-top: 4rem;
+}
+
+.article__header--title {
+  font-size: 2.5rem;
+}
+
+.article__header--meta {
+  font-style: italic;
+}
+
+.article__header--summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.article__content {
+  margin: 3rem 0;
+  font-size: clamp(1em, 2vw, 1.4em);
+}
+
+.article__content__section {
+  margin: 3rem 0;
+}
+
+.article__content__ul {}
+
+.article__content__ul li {}
