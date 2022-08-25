@@ -2,6 +2,8 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
+import config from '../utils/config'
+
 const Post = ({ data }) => {
 
   return (
@@ -35,3 +37,22 @@ export const query = graphql`
 
 export default Post
 
+export const Head = ({
+  data: {
+    mdx: {
+      frontmatter: {
+        title
+      }
+    }
+  },
+  location: {
+    pathname
+  }
+}) => {
+  return (
+    <>
+      <title>{ title } | { config.siteTitle }</title>
+      <link rel="canonical" href={ config.siteUrl + pathname } />
+    </>
+  )
+}

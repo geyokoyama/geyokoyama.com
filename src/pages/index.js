@@ -44,4 +44,9 @@ const Index = () => {
 
 export default Index
 
-export const Head = () => <title>{ config.siteTitle }</title>
+export const Head = () => (
+  <>
+    <title>{ config.siteTitle }</title>
+    <link rel="canonical" href={ config.siteUrl } />
+  </>
+)

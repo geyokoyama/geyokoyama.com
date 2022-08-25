@@ -45,7 +45,17 @@ export const query = graphql`
   }
 `
 
-export const Head = () => <title>Blog | { config.siteTitle }</title>
-
 export default Blog
 
+export const Head = ({
+  location: {
+    pathname
+  }
+}) => {
+  return (
+    <>
+      <title>Blog | { config.siteTitle }</title>
+      <link rel="canonical" href={ config.siteUrl + pathname } />
+    </>
+  )
+}
