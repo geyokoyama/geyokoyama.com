@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import config from '../utils/config'
+import Seo from '../components/SEO'
 
 const NotFoundPage = () => {
   return (
@@ -18,4 +18,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found | { config.siteTitle }</title>
+export const Head = () => <Seo pageTitle="Not Found" />
