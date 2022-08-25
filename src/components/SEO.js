@@ -7,7 +7,7 @@ const Seo = ({ pageTitle, children }) => {
     title,
     author,
     description,
-  } = useSiteMetadata();
+  } = useSiteMetadata()
 
   return (
     <>

@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+
 const Masthead = ({ siteTitle, internalLinks }) => (
   <header className="masthead">
     <div className="container">
