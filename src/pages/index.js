@@ -2,8 +2,7 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-import config from '../utils/config'
-
+import Seo from '../components/SEO'
 import Online from '../components/Online'
 
 const Index = () => {
@@ -44,4 +43,4 @@ const Index = () => {
 
 export default Index
 
-export const Head = () => <title>{ config.siteTitle }</title>
+export const Head = () => <Seo />

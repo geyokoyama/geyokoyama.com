@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import config from '../utils/config'
+import Seo from '../components/SEO'
 
 const Post = ({ data }) => {
 
@@ -45,4 +45,4 @@ export const Head = ({
       }
     }
   }
-}) => <title>{ title } | { config.siteTitle }</title>
+}) => <Seo pageTitle={ title } />

@@ -1,8 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import config from '../utils/config'
-
+import Seo from '../components/SEO'
 import PostCard from "../components/PostCard"
 
 const Blog = ({ data }) => {
@@ -47,8 +46,4 @@ export const query = graphql`
 
 export default Blog
 
-export const Head = () => (
-  <>
-    <title>Blog | { config.siteTitle }</title>
-  </>
-)
+export const Head = () => <Seo pageTitle="Blog" />
