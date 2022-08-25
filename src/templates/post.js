@@ -44,15 +44,5 @@ export const Head = ({
         title
       }
     }
-  },
-  location: {
-    pathname
   }
-}) => {
-  return (
-    <>
-      <title>{ title } | { config.siteTitle }</title>
-      <link rel="canonical" href={ config.siteUrl + pathname } />
-    </>
-  )
-}
+}) => <title>{ title } | { config.siteTitle }</title>

@@ -49,5 +49,11 @@ module.exports = {
         output: `/`
       }
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.geyokoyama.com`,
+      },
+    },
   ],
 }
