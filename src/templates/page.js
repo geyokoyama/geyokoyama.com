@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Seo from '../components/SEO'
+import Seo from "../components/SEO"
 
 const Post = ({ data }) => {
 

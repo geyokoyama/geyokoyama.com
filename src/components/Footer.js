@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import Online from './Online'
+import Online from "./Online"
 
 const Footer = ({ author, internalLinks }) => {
   return (

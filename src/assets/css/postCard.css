@@ -16,6 +16,7 @@
 }
 
 .post-card__header--title a {
+  display: contents;
   content: "";
   top: 0;
   left: 0;

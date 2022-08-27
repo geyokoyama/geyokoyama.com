@@ -2,8 +2,8 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-import Seo from '../components/SEO'
-import Online from '../components/Online'
+import Seo from "../components/SEO"
+import Online from "../components/Online"
 
 const Index = () => {
   return (

@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import github from '../assets/github.png'
-import linkedin from '../assets/linkedin.png'
-import email from '../assets/email.png'
+import github from "../assets/github.png"
+import linkedin from "../assets/linkedin.png"
+import email from "../assets/email.png"
 
 const Online = ({ is_footer }) => {
 
@@ -13,7 +13,7 @@ const Online = ({ is_footer }) => {
   ]
 
   return (
-    <ul className={ 'online' + (is_footer ? ' footer__content__ul': '') }>
+    <ul className={ "online" + (is_footer ? " footer__content__ul": "") }>
       {
         profiles.map(profile => (
           <li key={ profile.name }>

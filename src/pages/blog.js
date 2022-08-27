@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Seo from '../components/SEO'
+import Seo from "../components/SEO"
 import PostCard from "../components/PostCard"
 
 const Blog = ({ data }) => {
