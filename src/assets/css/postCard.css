@@ -1,7 +1,17 @@
 .post-card {
   margin: 0.4rem 0;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
   position: relative;
+}
+
+.post-card a {
+  display: contents;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 .post-card__header {
@@ -11,19 +21,16 @@
   align-items: center;
 }
 
-.post-card__header--title {
-  margin: 0;
+.post-card__header:focus,
+.post-card__header:hover {
+  text-decoration: underline;
+  /*color: var(--font-color-bright);*/
 }
 
-.post-card__header--title a {
-  display: contents;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  text-decoration: none;
+.post-card__header--title {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.4rem;
 }
 
 .post-card__header--meta {

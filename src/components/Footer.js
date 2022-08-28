@@ -13,7 +13,11 @@ const Footer = ({ author, internalLinks }) => {
             {
               internalLinks.map(navItem => (
                 <li key={ navItem.name }>
-                  <Link to={ navItem.link }>
+                  <Link
+                    to={ navItem.link }
+                    activeClassName="active"
+                    className={ `navItem ${navItem.name.toLowerCase()}` }
+                  >
                     { navItem.name }
                   </Link>
                 </li>

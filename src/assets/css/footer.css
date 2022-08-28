@@ -15,4 +15,33 @@
 .footer__content__ul a {
   text-decoration: none;
   padding: 0.2rem 0;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.4;
+}
+
+.footer__content__ul.site_nav a:before {
+  content: "";
+  height: 0.15rem;
+  width: 100%;
+  background-color: var(--text-color);
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%);
+  transition: 0.3s;
+}
+
+.footer__content__ul.site_nav a.active {
+  font-weight: bold;
+}
+
+.footer__content__ul.site_nav a.active::before {
+  transform: translate(0);
+}
+
+.footer__content__ul.site_nav a:focus::before,
+.footer__content__ul.site_nav a:hover::before {
+  transform: translate(0);
 }
