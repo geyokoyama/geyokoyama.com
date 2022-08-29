@@ -1,6 +1,6 @@
 .masthead {
   padding-top: 1rem;
-  flex: 1;
+  flex: 0;
 }
 
 .masthead__brand {

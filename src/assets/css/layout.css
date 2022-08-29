@@ -3,3 +3,29 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+.article {}
+
+.article__header {}
+
+.article__header--title {}
+
+.article__header--meta {
+  font-style: italic;
+}
+
+.article__header--summary {
+  font-weight: bold;
+  font-size: var(--font-size-subtitle);
+}
+
+.article__content {
+  margin: var(--margin-content);
+  font-size: var(--font-size-content);
+}
+
+.article__content__section {}
+
+.article__content__ul {}
+
+.article__content__ul li {}

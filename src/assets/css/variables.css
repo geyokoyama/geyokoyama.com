@@ -1,8 +1,26 @@
 :root {
-  --container-width: 1024px;
+  /* Widths */
+  --container-width: 768px;
 
   /* Font Family */
-  --font-family-default: sans-serif;
+  --font-family-base: sans-serif;
 
-  --text-color: black;
+  /* Font Size */
+  --font-size-base: 16px;
+  --font-size-title: 2.6rem;
+  --font-size-subtitle: 1.2rem;
+  --font-size-content: clamp(1em, 2vw, 1.4em);
+
+  /* Text Color */
+  --text-color-base: black;
+
+  /* Line Height */
+  --line-height-base: 1.6;
+  --line-height-heading: 1.4;
+
+  /* Letter Spacing */
+  --letter-spacing-title: -0.03em;
+
+  /* Spacing */
+  --margin-content: 3rem 0;
 }

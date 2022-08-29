@@ -7,7 +7,7 @@ import Online from "../components/Online"
 
 const Index = () => {
   return (
-    <article>
+    <article className="article">
       <div className="container">
         <header className="article__header">
           <h1 className="article__header--title">Hey there, I'm George.</h1>

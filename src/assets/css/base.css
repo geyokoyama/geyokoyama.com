@@ -3,13 +3,18 @@
 }
 
 html {
-  font-family: var(--font-family-default);
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: var(--font-family-base);
+  text-color: var(--text-color-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 main {
-  flex: 1;
+  flex: auto;
+}
+
+section {
+  margin: var(--margin-content);
 }
 
 h1,
@@ -17,5 +22,10 @@ h2,
 h3,
 h4,
 h5 {
-  line-height: 1.3em;
+  line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: var(--font-size-title);
+  letter-spacing: var(--letter-spacing-title);
 }
