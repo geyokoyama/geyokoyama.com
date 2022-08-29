@@ -7,10 +7,10 @@ const Masthead = ({ siteTitle, internalLinks }) => (
     <div className="container">
       <nav>
         <Link to="/" className="masthead__brand">{ siteTitle }</Link>
-        <ul className="masthead__nav site_nav">
+        <ul className="masthead__ul site_nav">
           {
             internalLinks.map(navItem => (
-              <li className="masthead__nav--item" key={ navItem.name }>
+              <li className="masthead__ul__li" key={ navItem.name }>
                 <Link
                   to={ navItem.link }
                   partiallyActive={ true }

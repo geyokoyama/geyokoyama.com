@@ -10,7 +10,7 @@
 }
 
 .online .icon {
-  height: 2rem;
+  height: var(--icon-height);
   padding: 0 0.1rem;
 }
 
@@ -22,8 +22,8 @@
   font-weight: bold;
 }
 
-.online a {
-  text-decoration: none;
+.online .text .description {
+  font-size: var(--font-size-small);
 }
 
 .online a:before {
@@ -33,8 +33,4 @@
   right: 0;
   bottom: 0;
   position: absolute;
-}
-
-.online .text .description {
-  font-size: 0.9rem;
 }

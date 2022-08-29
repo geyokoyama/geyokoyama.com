@@ -1,65 +1,30 @@
 .masthead {
-  padding-top: 1rem;
   flex: 0;
+  font-size: var(--font-size-masthead);
 }
 
 .masthead__brand {
-  font-size: 1.2rem;
+  font-size: var(--font-size-subtitle);
   font-weight: bold;
   display: block;
   padding: 0.4rem 0;
-  margin: 0.4rem 0;
-  text-decoration: none;
 }
 
-.masthead__nav {
-  padding: 0;
+.masthead__ul {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  gap: 0 1rem;
+  gap: 0.2rem 1.4rem;
 }
 
-.masthead__nav li:first-child {
+.masthead__ul__li:first-child {
   display: none;
 }
 
-.masthead__nav--item {
-  display: block;
-  font-size: 1.5rem;
-}
-
-.masthead__nav--item a {
-  text-decoration: none;
-  padding: 0.5rem 0;
+.masthead__ul__li a {
   position: relative;
   overflow: hidden;
   display: block;
-  line-height: 1.4;
-}
-
-.masthead__nav--item a::before {
-  content: "";
-  height: 0.15rem;
-  width: 100%;
-  background-color: var(--text-color);
-  position:absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(-100%);
-  transition: 0.3s;
-}
-
-.masthead__nav--item a.active {
-  font-weight: bold;
-}
-
-.masthead__nav--item a.active::before {
-  transform: translate(0);
-}
-
-.masthead__nav--item a:focus::before,
-.masthead__nav--item a:hover::before {
-  transform: translate(0);
 }

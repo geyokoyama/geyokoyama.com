@@ -16,21 +16,18 @@
 
 .post-card__header {
   display: grid;
-  grid-template-columns: 1fr 30vw;
-  grid-gap: 2rem;
+  grid-template-columns: 1fr 33%;
+  grid-gap: 1rem;
   align-items: center;
 }
 
-.post-card__header:focus,
+.post-card__header:active,
 .post-card__header:hover {
   text-decoration: underline;
-  /*color: var(--font-color-bright);*/
 }
 
 .post-card__header--title {
   margin: 0;
-  line-height: 1.2;
-  font-size: 1.4rem;
 }
 
 .post-card__header--meta {
@@ -38,5 +35,3 @@
   margin-left: auto;
   font-style: italic;
 }
-
-.post-card__header--summary {}

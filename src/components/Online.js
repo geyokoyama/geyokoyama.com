@@ -13,15 +13,13 @@ const Online = ({ is_footer }) => {
   ]
 
   return (
-    <ul className={ "online" + (is_footer ? " footer__content__ul": "") }>
+    <ul className={ "online" + (is_footer ? " footer__ul": "") }>
       {
         profiles.map(profile => (
           <li key={ profile.name }>
-
             <a href={ profile.url }>
               <img className="icon" src={ profile.icon_url } alt={ profile.name } />
             </a>
-
             {!is_footer && (
               <div className="text">
                 <div className="name">
@@ -30,7 +28,6 @@ const Online = ({ is_footer }) => {
                 <div className="description">{ profile.description }</div>
               </div>
             )}
-
           </li>
         ))
       }

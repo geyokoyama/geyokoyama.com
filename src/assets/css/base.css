@@ -17,6 +17,10 @@ section {
   margin: var(--margin-content);
 }
 
+footer {
+  margin: var(--margin-content);
+}
+
 h1,
 h2,
 h3,
@@ -26,6 +30,17 @@ h5 {
 }
 
 h1 {
-  font-size: var(--font-size-title);
-  letter-spacing: var(--letter-spacing-title);
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+}
+
+ul {
+  margin: 1.4em 0;
+}
+
+a {
+  text-decoration: none;
 }

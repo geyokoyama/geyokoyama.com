@@ -1,11 +1,43 @@
+/* Container */
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   max-width: var(--container-width);
+}
+
+/* Site Navigation */
+  /* Put these on the parent a tag
+  /*position: relative;*/
+  /*overflow: hidden;*/
+  /*display: block;*/
+
+.site_nav a:before {
+  content: "";
+  height: 0.15rem;
+  width: 100%;
+  background-color: var(--text-color-base);
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%);
+  transition: var(--transition);
 }
 
 .site_nav a:after {
   content: "."
 }
 
+.site_nav a.active {
+  font-weight: bold;
+}
+
+.site_nav a.active::before {
+  transform: translate(0);
+}
+
+.site_nav a:active::before,
+.site_nav a:hover::before {
+  transform: translate(0);
+}
