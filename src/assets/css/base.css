@@ -2,11 +2,12 @@
   box-sizing: border-box;
 }
 
-html {
+body {
   font-family: var(--font-family-base);
-  text-color: var(--text-color-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+  background-color: var(--background-color);
+  color: var(--font-color-base);
 }
 
 main {
@@ -18,7 +19,8 @@ section {
 }
 
 footer {
-  margin: var(--margin-content);
+  padding: 3em 0 1em;
+  background-color: black;
 }
 
 h1,
@@ -27,14 +29,20 @@ h3,
 h4,
 h5 {
   line-height: var(--line-height-heading);
+  color: var(--font-color-heading);
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
 }
 
 h2 {
   font-size: clamp(1.5rem, 4vw, 1.9rem);
+}
+
+p {
+  margin-block-start: 1.6em;
+  margin-block-end: 1.6em;
 }
 
 ul {
@@ -42,5 +50,19 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  color: var(--font-color-base);
+}
+
+a:active,
+a:hover {
+  color: var(--font-color-active);
+}
+
+main a {
+  color: var(--link-color-base);
+}
+
+main a:active,
+main a:hover {
+  color: var(--link-color-active);
 }

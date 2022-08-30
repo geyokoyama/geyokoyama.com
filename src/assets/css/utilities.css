@@ -13,11 +13,19 @@
   /*overflow: hidden;*/
   /*display: block;*/
 
+.site_nav a {
+  text-decoration: none;
+}
+
+.site_nav a.navItem {
+  padding: 0.3em 0;
+}
+
 .site_nav a:before {
   content: "";
   height: 0.15rem;
   width: 100%;
-  background-color: var(--text-color-base);
+  background-color: var(--font-color-base);
   position:absolute;
   bottom: 0;
   left: 0;
