@@ -1,15 +1,14 @@
 import * as React from "react"
-
-import github from "../assets/github.png"
-import linkedin from "../assets/linkedin.png"
-import email from "../assets/email.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Online = ({ is_footer }) => {
 
   const profiles = [
-    { icon_url: github, url: `https://github.com/geyokoyama`, name: `GitHub`, description: `It's my repo!` },
-    { icon_url: linkedin, url: `https://www.linkedin.com/in/georgeyokoyama/`, name: `LinkedIn`, description: `Professional networking!` },
-    { icon_url: email, url: `mailto:george@geyokoyama.com`, name: `Email`, description: `Hello there!` },
+    { icon: <FontAwesomeIcon icon={faGithub} className="icon fa-2xl"/>, url: `https://github.com/geyokoyama`, name: `GitHub`, description: `It's my repo!` },
+    { icon: <FontAwesomeIcon icon={faLinkedin} className="icon fa-2xl"/>, url: `https://www.linkedin.com/in/georgeyokoyama/`, name: `LinkedIn`, description: `Professional networking!` },
+    { icon: <FontAwesomeIcon icon={faEnvelope} className="icon fa-2xl"/>, url: `mailto:george@geyokoyama.com`, name: `Email`, description: `Hello there!` },
   ]
 
   return (
@@ -18,7 +17,7 @@ const Online = ({ is_footer }) => {
         profiles.map(profile => (
           <li key={ profile.name }>
             <a href={ profile.url }>
-              <img className="icon" src={ profile.icon_url } alt={ profile.name } />
+              { profile.icon }
             </a>
             {!is_footer && (
               <div className="text">

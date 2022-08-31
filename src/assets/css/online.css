@@ -9,11 +9,6 @@
   align-items: center;
 }
 
-.online .icon {
-  height: var(--icon-height);
-  padding: 0 0.1rem;
-}
-
 .online .text {
   margin-left: 1rem;
 }
@@ -24,6 +19,15 @@
 
 .online .text .description {
   font-size: var(--font-size-small);
+}
+
+.online a {
+  color: var(--font-color-base);
+}
+
+.online a:focus,
+.online a:hover {
+  color: var(--font-color-active);
 }
 
 .online a:before {
