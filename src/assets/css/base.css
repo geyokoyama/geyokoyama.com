@@ -19,8 +19,8 @@ section {
 }
 
 footer {
-  padding: 3em 0 1em;
-  background-color: black;
+  padding: 5em 0 1em;
+  background: linear-gradient(var(--background-color), var(--footer-color));
 }
 
 h1,

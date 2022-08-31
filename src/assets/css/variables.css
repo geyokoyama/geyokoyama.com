@@ -14,7 +14,8 @@
   --font-size-small: 0.9rem;
 
   /* Text Color */
-  --background-color: #101010;
+  --background-color: #121212;
+  --footer-color: #000000;
   --font-color-base: #bebebe;
   --font-color-heading: #d3d3d3;
   --font-color-active: #f8f8ff;

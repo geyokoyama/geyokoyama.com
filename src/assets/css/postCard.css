@@ -21,13 +21,18 @@
   align-items: center;
 }
 
-.post-card__header:active,
+.post-card__header:focus,
 .post-card__header:hover {
   text-decoration: underline;
 }
 
 .post-card__header--title {
   margin: 0;
+}
+
+.post-card__header--title:focus,
+.post-card__header--title:hover {
+  color: var(--font-color-active);
 }
 
 .post-card__header--meta {
