@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Posts = ({ data }) => {
+const Post = ({ data }) => {
   return (
     <article key={ data.id } className="post-card">
       <Link to={ `/blog/${ data.slug }` }>
@@ -16,5 +16,4 @@ const Posts = ({ data }) => {
   )
 }
 
-export default Posts
-
+export default Post

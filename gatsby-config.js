@@ -7,11 +7,15 @@ module.exports = {
     internalLinks: [
       {
         name: `Home`,
-        link: `/`
+        link: `/`,
       },
       {
         name: `Blog`,
-        link: `/blog`
+        link: `/blog`,
+      },
+      {
+        name: `Projects`,
+        link: `/projects`,
       },
     ],
   },

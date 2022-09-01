@@ -17,3 +17,14 @@
   margin: var(--margin-content);
   font-size: var(--font-size-content);
 }
+
+.project-list {
+  display: grid;
+  gap: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

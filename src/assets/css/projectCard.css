@@ -1,0 +1,23 @@
+.project-card {
+  position: relative;
+  padding: 1em;
+  background-color: var(--background-color-2);
+}
+
+.project-card__header--title,
+.project-card p {
+  margin: 0.5em 0;
+}
+
+.project-card__header--title a {
+  text-decoration: none;
+}
+
+.project-card__header--title a::before {
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
