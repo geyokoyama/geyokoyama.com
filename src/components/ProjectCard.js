@@ -16,6 +16,8 @@ const Project = ({ data }) => {
       <div className="project-card__body">
         <p>{ data.description }</p>
       </div>
+      <div className="project-card__links">
+      </div>
     </article>
   )
 }

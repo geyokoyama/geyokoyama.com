@@ -1,7 +1,7 @@
 :root {
   /* Widths */
   /*--container-width-min: 360px;*/
-  --container-width: 768px;
+  --container-width: 80rem;
 
   /* Font Family */
   --font-family-base: sans-serif;

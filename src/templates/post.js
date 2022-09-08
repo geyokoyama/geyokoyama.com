@@ -8,7 +8,7 @@ const Post = ({ data }) => {
 
   return (
     <article className="article">
-      <div className="container">
+      <div className="prose">
         <header className="article__header">
           <h1 className="article__header--title">{ data.mdx.frontmatter.title }</h1>
           { data.mdx.frontmatter.date && <p className="article__header--meta">Updated on { data.mdx.frontmatter.date }</p> }
