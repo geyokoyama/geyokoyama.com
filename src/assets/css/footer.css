@@ -1,5 +1,7 @@
 .footer {
   flex: 0;
+  padding: 5em 0 1em;
+  background: linear-gradient(var(--background-color), var(--footer-color));
 }
 
 .footer__ul {

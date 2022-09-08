@@ -1,6 +1,8 @@
 .masthead {
   flex: 0;
   font-size: var(--font-size-masthead);
+  background: linear-gradient(var(--footer-color), var(--background-color));
+  padding-bottom: 1.6rem;
 }
 
 .masthead__brand {
