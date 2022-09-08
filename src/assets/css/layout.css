@@ -19,8 +19,9 @@
 }
 
 .prose {
-  max-width: 768px;
+  max-width: var(--prose-width);
   margin: auto;
+  padding: 0.5rem 1rem;
 }
 
 .project-list {

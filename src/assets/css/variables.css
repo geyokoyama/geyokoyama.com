@@ -2,6 +2,7 @@
   /* Widths */
   /*--container-width-min: 360px;*/
   --container-width: 80rem;
+  --prose-width: 768px;
 
   /* Font Family */
   --font-family-base: sans-serif;
