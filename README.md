@@ -1,8 +1,12 @@
-# geyokoyama.com
+# [geyokoyama.com](geyokoyama.com)
 
 [![License](https://img.shields.io/github/license/geyokoyama/geyokoyama.com)](https://raw.githubusercontent.com/geyokoyama/geyokoyama.com/main/LICENSE) [![Netlify Status](https://api.netlify.com/api/v1/badges/b0bd7c37-0ebf-4cd7-bd30-4752763e5869/deploy-status)](https://app.netlify.com/sites/geyokoyama/deploys)
 
-This is my personal website powered by [Gatsby](https://www.gatsbyjs.com/) and deployed on [Netlify](https://www.netlify.com/). It's my blog and portfolio.
+This is the source code for my personal website. It's built with [Gatsby](https://www.gatsbyjs.com/) and [Tailwind CSS](https://tailwindcss.com/), and deployed on [Netlify](https://www.netlify.com/).
+
+## Screenshots
+
+![Screenshot of home page](./src/assets/geyokoyama_index.jpeg)
 
 ---
 
