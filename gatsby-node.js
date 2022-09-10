@@ -9,20 +9,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     query {
       allMdx {
-        edges {
-          node {
-            id
-            slug
-            frontmatter{
-              title
-              date
-            }
-            body
-            fields {
-              collection
-            }
+        nodes {
+          id
+          slug
+          frontmatter{
+            title
+            date
           }
+          body
+          fields {
+            collection
+          }
+          tableOfContents
         }
+
       }
     }
   `)
@@ -32,20 +32,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const all = result.data.allMdx.edges
+  const all = result.data.allMdx.nodes
 
-  const posts = all.filter(post => post.node.fields.collection === "posts")
-  const pages = all.filter(page => page.node.fields.collection === "pages")
+  const posts = all.filter(post => post.fields.collection === "posts")
+  const pages = all.filter(page => page.fields.collection === "pages")
 
   posts.forEach((post, index) => {
     const previousPostId = index === 0 ? null : posts[index - 1].id
     const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
     createPage({
-      path: `blog/${post.node.slug}`,
+      path: `blog/${post.slug}`,
       component: postTemplate,
       context: {
-        id: post.node.id,
+        id: post.id,
         previousPostId,
         nextPostId
       }
@@ -54,10 +54,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   pages.forEach((page, index) => {
     createPage({
-      path: page.node.slug,
+      path: page.slug,
       component: pageTemplate,
       context: {
-        id: page.node.id,
+        id: page.id,
       }
     })
   })

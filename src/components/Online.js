@@ -12,16 +12,16 @@ const Online = ({ is_footer }) => {
   ]
 
   return (
-    <ul className={ "online" + (is_footer ? " footer__ul": "") }>
+    <ul className={`flex flex-row ${!is_footer && ("flex-col")} gap-y-1 gap-x-6 sm:w-fit`}>
       {
         profiles.map(profile => (
-          <li key={ profile.name }>
-            <a href={ profile.url }>
+          <li className="flex items-center relative" key={ profile.name }>
+            <a href={ profile.url } className="hover:text-teal-500 focus:text-teal-500 active:text-teal-900 text-lg before:absolute before:inset-0">
               { profile.icon }
             </a>
             {!is_footer && (
-              <div className="text">
-                <div className="name">
+              <div className="pl-4">
+                <div className="text-lg font-semibold">
                   { profile.name }
                 </div>
                 <div className="description">{ profile.description }</div>

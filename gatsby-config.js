@@ -13,10 +13,6 @@ module.exports = {
         name: `Blog`,
         link: `/blog`,
       },
-      {
-        name: `Projects`,
-        link: `/projects`,
-      },
     ],
   },
   plugins: [
@@ -58,5 +54,6 @@ module.exports = {
         siteUrl: `https://www.geyokoyama.com`,
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 }

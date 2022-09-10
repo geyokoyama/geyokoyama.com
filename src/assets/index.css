@@ -1,19 +1,3 @@
-/* Variables */
-@import "./css/variables.css";
-
-/* Core CSS */
-@import "./css/normalize.css";
-@import "./css/base.css";
-
-/* Layouts */
-@import "./css/layout.css";
-
-/* Components */
-@import "./css/masthead.css";
-@import "./css/footer.css";
-@import "./css/postCard.css";
-@import "./css/projectCard.css";
-@import "./css/online.css";
-
-/* Utilities */
-@import "./css/utilities.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
