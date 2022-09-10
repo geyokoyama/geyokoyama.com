@@ -1,6 +1,8 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faUserAstronaut, faClipboard, faProjectDiagram, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
 
 import Seo from "../components/SEO"
 import Online from "../components/Online"
@@ -27,7 +29,7 @@ const Index = () => {
       </header>
       <section className="max-w-screen-xl m-auto">
         <div className="px-3 py-10">
-          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6">About</h2>
+          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6"><FontAwesomeIcon icon={faUserAstronaut} />&nbsp;About</h2>
           <div className="py-3 md:py-6 overflow-hidden">
             <figure className="w-fit m-auto py-5 md:float-left md:pt-0 md:pr-5 md:pb-5">
               <StaticImage
@@ -45,7 +47,7 @@ const Index = () => {
       </section>
       <section className="max-w-screen-xl m-auto">
         <div className="px-3 py-10">
-          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6">Miscellaneous</h2>
+          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6"><FontAwesomeIcon icon={faClipboard} />&nbsp;Miscellaneous</h2>
           <div className="py-3 md:py-6">
             <Link to="/resume" className="underline hover:text-teal-500 focus:text-teal-500 focus:text-teal-500 active:text-teal-900">Résumé</Link>
           </div>
@@ -53,7 +55,7 @@ const Index = () => {
       </section>
       <section className="max-w-screen-xl m-auto">
         <div className="px-3 py-10">
-          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6">Projects</h2>
+          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6"><FontAwesomeIcon icon={faProjectDiagram} />&nbsp;Projects</h2>
           <div className="py-3 md:py-6">
             <div className="grid gap-9 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {
@@ -67,7 +69,7 @@ const Index = () => {
       </section>
       <section className="max-w-screen-xl m-auto">
         <div className="px-3 py-10">
-          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6">Contact</h2>
+          <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6"><FontAwesomeIcon icon={faHandshakeAngle} />&nbsp;Contact</h2>
           <div className="py-3 md:py-6">
             <p>Want to get in touch? Send an email to <a href="mailto:george@geyokoyama.com" className="underline hover:text-teal-500 focus:text-teal-500 active:text-teal-900">george@geyokoyama.com</a> or connect with me on social media.</p>
           </div>
