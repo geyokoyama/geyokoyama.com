@@ -49,7 +49,7 @@ const Index = () => {
         <div className="px-3 py-10">
           <h2 className="text-5xl md:text-7xl font-semibold py-3 md:py-6"><FontAwesomeIcon icon={faClipboard} />&nbsp;Miscellaneous</h2>
           <div className="py-3 md:py-6">
-            <Link to="/resume" className="underline hover:text-teal-500 focus:text-teal-500 focus:text-teal-500 active:text-teal-900">Résumé</Link>
+            <Link to="/resume/" className="underline hover:text-teal-500 focus:text-teal-500 focus:text-teal-500 active:text-teal-900">Résumé</Link>
           </div>
         </div>
       </section>

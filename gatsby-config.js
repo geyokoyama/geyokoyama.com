@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         name: `Blog`,
-        link: `/blog`,
+        link: `/blog/`,
       },
     ],
   },
@@ -55,5 +55,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+
   ],
+  trailingSlash: `always`
 }
