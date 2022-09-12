@@ -5,8 +5,8 @@ import Online from "./Online"
 
 const Footer = ({ author, internalLinks }) => (
   <footer>
-    <div className="max-w-screen-xl m-auto px-3 py-10 flex flex-col gap-y-3">
-      <Online is_footer />
+    <div className="max-w-screen-xl m-auto px-3 pb-10 pt-20 flex flex-col gap-y-3">
+      <Online />
       <ul className="flex flex-row flex-wrap gap-y-1 gap-x-4">
         {
           internalLinks.map(navItem => (

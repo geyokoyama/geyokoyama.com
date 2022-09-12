@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faUserAstronaut, faClipboard, faProjectDiagram, faHandshakeAngle } from '@fortawesome/free-solid-svg-icons'
 
 import Seo from "../components/SEO"
-import Online from "../components/Online"
 import ProjectCard from "../components/ProjectCard"
 
 import projects from "../data/projects"
@@ -73,7 +72,6 @@ const Index = () => {
           <div className="py-3 md:py-6">
             <p>Want to get in touch? Send an email to <a href="mailto:george@geyokoyama.com" className="underline hover:text-teal-500 focus:text-teal-500 active:text-teal-900">george@geyokoyama.com</a> or connect with me on social media.</p>
           </div>
-          <Online />
         </div>
       </section>
     </article>
