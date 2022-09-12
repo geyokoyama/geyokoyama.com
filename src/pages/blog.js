@@ -11,7 +11,7 @@ const Blog = ({ data }) => {
     <article>
       <header className="px-3 py-10 text-teal-50 bg-gradient-to-tr from-teal-900 to-teal-500">
         <div className="max-w-screen-xl m-auto relative">
-          <span className="absolute top-0 right-0 text-9xl text-teal-500 opacity-50 drop-shadow-md"><FontAwesomeIcon icon={faPenNib} /></span>
+          <span className="absolute top-[-1.2rem] md:top-0 right-0 text-9xl text-teal-500 opacity-50 drop-shadow-md"><FontAwesomeIcon icon={faPenNib} /></span>
           <div className="z-20 relative">
             <h1 className="text-5xl md:text-8xl font-semibold pb-5 md:pb-8">Blog.</h1>
             <p className="text-xl md:text-3xl pb-3 md:pb-6">Toughts, Learnings & Ramblings</p>

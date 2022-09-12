@@ -1,22 +1,34 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
+import MDXComponents from "../components/MDXComponents"
 import Seo from "../components/SEO"
 
-const Post = ({ data }) => {
+const Page = ({ data }) => {
+  const { mdx: page } = data
 
   return (
-    <article className="article">
-      <div className="container">
-        <header className="article__header">
-          <h1 className="article__header--title">{ data.mdx.frontmatter.title }</h1>
-          { data.mdx.frontmatter.date && <p className="article__header--meta">Updated on { data.mdx.frontmatter.date }</p> }
-        </header>
-        <div className="article__content">
-          <MDXRenderer>
-            { data.mdx.body }
-          </MDXRenderer>
+    <article>
+      <header className="text-teal-50 bg-gradient-to-tr from-teal-900 to-teal-500">
+        <div className="px-3 py-10 max-w-screen-xl m-auto relative">
+          <div className="z-20 relative">
+            <span className="absolute top-[-1.2rem] md:top-0 right-0 text-9xl text-teal-500 opacity-50 drop-shadow-md"><FontAwesomeIcon icon={faCircleUser} /></span>
+            <h1 className="text-3xl md:text-6xl font-semibold pb-5 md:pb-8">{ page.frontmatter.title }</h1>
+            { page.frontmatter.date && <p className="text-xl md:text-3xl pb-3 md:pb-6">Updated on { page.frontmatter.date }</p> }
+          </div>
+        </div>
+      </header>
+      <div className="max-w-screen-xl m-auto">
+        <div className="px-3 py-10 max-w-prose m-auto md:text-xl">
+          <MDXProvider components={ MDXComponents }>
+            <MDXRenderer>
+              { page.body }
+            </MDXRenderer>
+          </MDXProvider>
         </div>
       </div>
     </article>
@@ -35,7 +47,7 @@ export const query = graphql`
   }
 `
 
-export default Post
+export default Page
 
 export const Head = ({
   data: {
