@@ -1,4 +1,5 @@
 const path = require("path")
+const slugify = require(`@sindresorhus/slugify`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -11,7 +12,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       allMdx {
         nodes {
           id
-          slug
           frontmatter{
             title
             date
@@ -19,6 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           body
           fields {
             collection
+            slug
           }
           tableOfContents
         }
@@ -42,7 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
     createPage({
-      path: `blog/${post.slug}`,
+      path: `blog/${post.fields.slug}`,
       component: postTemplate,
       context: {
         id: post.id,
@@ -54,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   pages.forEach((page, index) => {
     createPage({
-      path: page.slug,
+      path: page.fields.slug,
       component: pageTemplate,
       context: {
         id: page.id,
@@ -70,9 +71,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     let collection = parent.sourceInstanceName;
     createNodeField({
       node,
-      name: 'collection',
+      name: `collection`,
       value: collection,
     });
+    createNodeField({
+      node,
+      name: `slug`,
+      value: `${slugify(node.frontmatter.title)}`
+    })
   }
 };
 
@@ -92,6 +98,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Fields {
       collection: String
+      slug: String
     }
   `)
 }
