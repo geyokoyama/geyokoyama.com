@@ -3,13 +3,12 @@ import { graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons'
 import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import MDXComponents from "../components/MDXComponents"
 import Seo from "../components/SEO"
 
-const Page = ({ data }) => {
-  const { mdx: page } = data
+const Page = ({ data: { mdx }, children }) => {
+  const page = mdx
 
   return (
     <article>
@@ -25,9 +24,7 @@ const Page = ({ data }) => {
       <div className="max-w-screen-xl m-auto">
         <div className="px-3 py-10 max-w-prose m-auto md:text-xl">
           <MDXProvider components={ MDXComponents }>
-            <MDXRenderer>
-              { page.body }
-            </MDXRenderer>
+            { children }
           </MDXProvider>
         </div>
       </div>
@@ -36,9 +33,8 @@ const Page = ({ data }) => {
 }
 
 export const query = graphql`
-  query($id: String) {
+  query($id: String!) {
     mdx(id: { eq: $id }) {
-      body
       frontmatter {
         date
         title

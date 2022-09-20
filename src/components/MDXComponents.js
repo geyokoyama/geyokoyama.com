@@ -22,7 +22,7 @@ const MDXComponents = {
   //strong: props => <strong className="" {...props} />,
   //delete: props => <delete className="" {...props} />,
   //hr: props => <hr className="" {...props} />,
-  //code: props => <code className="bg-slate-300" {...props} />, // Possibly need to update plugin
+  code: props => <code className="bg-slate-200" {...props} />,
   a: props => <a className="underline hover:text-teal-500 focus:text-teal-500 active:text-teal-900" {...props} />,
   //img: props => <img className="" {...props} />,
 }

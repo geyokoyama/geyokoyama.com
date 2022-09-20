@@ -1,13 +1,12 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import MDXComponents from "../components/MDXComponents"
 import Seo from "../components/SEO"
 
-const Post = ({ data }) => {
-  const { mdx: post } = data
+const Post = ({ data: { mdx }, children }) => {
+  const post = mdx
 
   return (
     <article>
@@ -22,9 +21,7 @@ const Post = ({ data }) => {
       <div className="max-w-screen-xl m-auto">
         <div className="px-3 py-10 max-w-prose m-auto md:text-xl">
           <MDXProvider components={ MDXComponents }>
-            <MDXRenderer>
-              { post.body }
-            </MDXRenderer>
+            { children }
           </MDXProvider>
         </div>
       </div>
@@ -35,7 +32,6 @@ const Post = ({ data }) => {
 export const query = graphql`
   query($id: String) {
     mdx(id: { eq: $id }) {
-      body
       frontmatter {
         date
         title

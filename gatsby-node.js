@@ -21,6 +21,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             collection
             slug
           }
+          internal {
+            contentFilePath
+          }
           tableOfContents
         }
 
@@ -44,7 +47,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: `blog/${post.fields.slug}`,
-      component: postTemplate,
+      component:  `${postTemplate}?__contentFilePath=${post.internal.contentFilePath}`,
       context: {
         id: post.id,
         previousPostId,
@@ -56,7 +59,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   pages.forEach((page, index) => {
     createPage({
       path: page.fields.slug,
-      component: pageTemplate,
+      component: `${pageTemplate}?__contentFilePath=${page.internal.contentFilePath}`,
       context: {
         id: page.id,
       }
