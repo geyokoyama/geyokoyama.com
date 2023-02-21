@@ -4,6 +4,14 @@
 
 This is the source code for my personal website. It's built with [Gatsby](https://www.gatsbyjs.com/) and [Tailwind CSS](https://tailwindcss.com/), and deployed on [Netlify](https://www.netlify.com/).
 
+## Install
+
+1. Download repo. e.g., `git clone --recursive-submodules git@github.com:geyokoyama/geyokoyama.com.git`
+
+2. Run `npm install`
+
+3. Install [gatsby-cli](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli). `npm install -g gatsby-cli`
+
 ## Screenshots
 
 ![Screenshot of home page](./src/assets/geyokoyama_index.jpeg)
